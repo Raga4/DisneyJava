@@ -1,0 +1,259 @@
+OOPs Principles:
+	Abstraction
+	Encapsulation
+	Polymorphism
+	Inheritance
+	
+	ex: c++
+		java
+		
+		Java Software: JDK  -> Java Develop Kit
+		SunMicrosystems - James Gosling 1995
+		SunMicrosystems is acquired by Oracle corp.
+		To run java you have to install JDK
+			
+			after download and install, add it to path
+			c:\software\jdk1.8 <- installation folder
+			path= you point to bin folder of c:\software\jdk1.8 
+			inside bin you have	
+			compiler as javac.exe
+			runtime as java.exe
+			JAVA_HOME=c:\software\jdk1.8
+
+class: The fundamental unit of java program is "class"
+
+	[access-specifier]   class    ClassName {
+			properties: variables;
+			behaviours: methods(){...}
+	}
+	
+	
+	class Prog1 {
+		public static void main(String args[]) {
+			System.out.println("Hello ! I am first program");
+		}
+	}
+	
+	prompt> javac Prog1.java <-case sensitive    --> Prog1.class is output of javac Prog1.java
+	prompt> java Prog1  <-- it executes byte code   Prog1.class that is compiled by javac
+	
+	
+	
+	
+	class Adder {
+		public static void main(String args[]) {
+			int a=10;
+			int b=20;
+			int c=a+b;
+			System.out.println(c);
+		}
+	}
+	
+	Note: Above program uses constants to add. But if you want to change, you have to
+	modify values by opening the program
+	
+	
+	Command Line args to pass values:
+	java Adder2 10 20 30 40    >>> args[0] as 10   args[1] as 20....
+	class Adder2 {
+		public static void main(String args[]) {
+			int a=Integer.parseInt(args[0]);
+			int b=Integer.parseInt(args[1]);
+			int c=a+b;
+			System.out.printf("%d added to %d total is:%d",a,b,c);
+		}
+	}
+	
+	javac Adder2.java
+	java Adder2  12 4 5 6  7
+	
+	
+	Keyboard Input: Interactive way of programming where user enters value at runtime, unlike passing values from commandline thru args.
+	Scanner is available in java.utils (#include<conio.h>) ->in java we write as 
+	import java.util.Scanner; //<-- #include . If you have multiple classes use import java.util.*;
+	Scanner scanner = new Scanner(System.in);
+    String inputString = scanner.nextLine();
+	
+	System.out means monitor
+	System.in means keyboard
+	
+	Conditional statements in Java:
+	if-else  : 
+	
+		arithmetic operators    ==    for test equals or not
+			>
+			<
+			>=
+			<=
+			!=
+		
+		for String you should use .equals() instead of ==
+		
+		Logical Operators: when you want to compare more than one condition then use this
+		
+			&& 	AND 	ex:   a<b && c>d  means condition 1 and condition 2 should be true
+			||	OR		ex:   a==b || a==c  means one of the condition need to be true		
+			!	NOT		ex:  !(a==10 || b==20) 
+			!(a>b || b>c || z==x)
+		
+		if(condition) {
+			what todo when condition is true
+		} else{
+			what to do when condition is false
+		}
+		
+		if(condition1){
+			statements1;
+		}else if(condition2) {
+			statements2;
+		} else if(conditionn){
+			statementsn;
+		} else{
+			otherwise statements;
+		}
+		
+		......
+		
+		if(condition1){
+				if(condition-A){
+				}
+		}else if(condition-B){
+		}else{
+		}
+		
+		
+		https://www.eclipse.org/downloads/
+		
+		programs: 
+		1. write program to input 3 nos and print biggest of the 3
+		2. write a program to swap 2 nos.
+				a=2 	b=10
+				a=10	b=2
+				swap only if nos are different.
+				if not, print - both nos are same
+		
+	switch-case:
+		switch(var){
+			case value1:
+				statements-1;
+			case value2:
+				statements;
+			case value-n:
+				statements;
+			default:
+				which is if none of the above satisfies;
+			
+		}
+	
+	import java.util.Scanner;
+
+public class SwitchEx {
+public static void main(String[] args) {
+	String alpha;
+	Scanner sc=new Scanner(System.in);
+	System.out.print("Enter any alphabet:");
+	alpha=sc.next();
+	/*
+	 * if(alpha.equals("a") || alpha.equals("e")){ //TODO: complete this
+	 * System.out.println("it is vowel"); }else {
+	 * System.out.println("it is consonent"); }
+	 */	
+	switch(alpha) {
+	case "a":
+		System.out.println("a is vowel");
+		break;
+	case "e":
+		System.out.println("e is vowel");
+		break;
+	case "i":
+		System.out.println("i is vowel");
+		break;
+	default:
+		System.out.println("it is consonent");
+	}
+	}
+}
+
+	loops: also known as iterations. In this program structure - the statements are repeated
+		based on a condition. 
+	while : entry controlled loop. it repeats the instructions as long as the condition is true
+		while(condition(s)) {
+			statements;
+		}
+		
+		example program:
+		
+	import java.util.Scanner;
+
+public class WhileEx {
+	public static void main(String[] args) {
+		int n=1;
+		int eno;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Upto what number?");
+		eno=sc.nextInt();
+		while(n<=eno) {
+			System.out.println(n);
+			n++;
+		}
+	}
+}
+Ex1: Modify the progarm to enter start value and end-value. It should print numbers in between
+	Enter Start Value:  1
+	Enter End Value:3
+	
+	1
+	2
+	3
+Ex2:  Modify the progarm so that if first value greater than 2nd value, it should print
+	Hi! ending value should be greater than starting value. Please re enter
+import java.util.Scanner;
+
+public class WhileEx2 {
+	public static void main(String[] args) {
+		int n1,n2,n3, tot;
+		String ans="y";
+		Scanner sc=new Scanner(System.in);
+		while(ans.equals("y")) {
+			System.out.print("Enter no1:");
+			n1=sc.nextInt();
+			System.out.print("Enter no2:");
+			n2=sc.nextInt();
+			System.out.print("Enter no3:");
+			n3=sc.nextInt();
+			tot=n1+n2+n3;
+			System.out.println("Total="+tot);
+			System.out.print("Continue y/n?");
+			ans=sc.next();
+		}
+	}
+}
+	EX: Modify the program so that it continues to run if you enter "Y" or "Yes" also
+
+	do-while : it is exit controlled loop. it will execute atleast once before checking condition at the end.
+	
+		do{
+			statements;
+			}while(condition(s));
+	for :  is a numberic loop that usual based on initial value, increment and end values.
+	
+	for(initialvalue;condition;increment){
+	}
+	
+	for(i=1;i<=10;i++){
+		statements;
+	}
+	
+	for(int i=100;i<=1000;i+=5){
+		statements;
+	}
+	
+	no  x   1   =  no*1
+	
+	Exercise: write a program that asks for table number and upto. Then print table for the number upto given value.
+	
+	
+github
+	
+	
+	
