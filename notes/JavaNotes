@@ -253,7 +253,32 @@ public class WhileEx2 {
 	Exercise: write a program that asks for table number and upto. Then print table for the number upto given value.
 	
 	
-github
+github: It is a centralized code repository. where developers and leads all store their code. It can be used to not only store but also to retrieve the latest code.
+						github	
+						 (Raga4)	DisneyJava
+											artifacts (notes)
+												code (java files)
+												
+					1. create account in github -1 time job
+					2. provide collaborator access to your team - 1 time job
+					3. download git software and install. Add to path
+						if you type cmd> git<enter> it should show some output
+					4. to setup the code in your laptop:
 	
-	
-	
+						cmd> git clone  https://github.com/Raga4/DisneyJava
+						DisneyJava will be folder created on your laptop
+					5. after setting git clone goto  DisneyJava
+						cd DisneyJava
+						DisneyJava> <-- here write your code.
+					6. now onwards 
+						a) git status <-- shows all files that are modified/deleted/newly added
+						a) git add . <-- add all files to git that are newly created or edited or deleted
+						  git add filename <-- only that file name will be added for push
+						after git add you will see the file in green means it is read to checkin 
+					b) git commit -m "message"
+						cmd>git commit -m "modified code for employee files"
+					c) git push origin HEAD <-- it will checkin the code to repote git repo
+					
+						
+					
+						
