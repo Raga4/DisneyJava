@@ -280,6 +280,8 @@ github: It is a centralized code repository. where developers and leads all stor
 					c) git push origin HEAD <-- it will checkin the code to repote git repo
 					d) git pull -r or git pull <-- it will checkout the code from remote git to your local computer
 					
+					added new line 7.15
+					
 						
 					
 						
