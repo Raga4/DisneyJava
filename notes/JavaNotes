@@ -279,8 +279,14 @@ github: It is a centralized code repository. where developers and leads all stor
 						cmd>git commit -m "modified code for employee files"
 					c) git push origin HEAD <-- it will checkin the code to repote git repo
 					d) git pull -r or git pull <-- it will checkout the code from remote git to your local computer
-					
-					added new line 7.15
+					e) git checkout -b "branchname" : -b is to create new branch of the remote branch
+						ex: git checkout -b feature/UI-Screens
+					f) git checkout "branchname" <- to switch to that branch	
+						ex: git checkout feature/UI-Screens
+					g) pull request: the pull request is to submit the code for review.
+						it can be commented, approved by Reviewer
+						
+					https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 					
 						
 					
