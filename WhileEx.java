@@ -2,21 +2,14 @@ import java.util.Scanner;
 
 public class WhileEx {
 	public static void main(String[] args) {
-		int n1,n2,n3, tot;
-		String ans="y";
+		int n=1;
+		int eno;
 		Scanner sc=new Scanner(System.in);
-		while(ans.equals("y")) {
-			System.out.print("Enter no1:");
-			n1=sc.nextInt();
-			System.out.print("Enter no2:");
-			n2=sc.nextInt();
-			System.out.print("Enter no3:");
-			n3=sc.nextInt();
-			tot=n1+n2+n3;
-			System.out.println("Total="+tot);
-			System.out.print("Continue y/n?");
-			ans=sc.next();
+		System.out.println("Upto what number?");
+		eno=sc.nextInt();
+		while(n<=eno) {
+			System.out.println(n);
+			n++;
 		}
-		System.out.println("Exited the while...");
 	}
 }

@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class names {
 	public static void main(String[] ars) {
 		Scanner sc=new Scanner(System.in);
-		String x,y;
-		System.out.println("enter 1st name");
-			x= sc.nextLine();
-		System.out.println("enter 2nd name");
-			y= sc.next();
-		if (x.equalsIgnoreCase(y)) {
+		int x,y;
+		System.out.println("x is siri");
+			x= sc.nextInt();
+		System.out.println("y is suni");
+			y= sc.nextInt();
+		if (x==y) {
 			System.out.println("both names are same");
 		}
 		else {

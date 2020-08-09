@@ -1,20 +1,19 @@
+
 import java.util.Scanner;
 
 public class reenter {
 	public static void main(String[] args) {
-		int a,b;
-		Scanner sc=new Scanner (System.in);
-		System.out.println("enter first number ");	
-		a=sc.nextInt();
-		System.out.println("enter second number ");
-		b=sc.nextInt();
-		if (a>b) {
-			System.out.println("b must be greater than a. \n Please re enter ");
-		}
-		else {
-			for (int i= a; i<=b; i++) {
-				System.out.println(i);
-			}
+		Scanner sc=new Scanner(System.in);
+		int n ;
+		n= sc.nextInt();
+		int eno;
+		System.out.println("enter the number");
+		eno=sc.nextInt();
+		while(n>= eno) {
+			System.out.println("Hi! ending value should be greater than starting value. Please re enter\n" + 
+					"import java.util.Scanner");
+
+		
 		}
 	}
 }
